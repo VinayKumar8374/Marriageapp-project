@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternity Matrimony - Find Your Perfect Match</title>
+    <!-- Tailwind CSS for rapid, attractive UI styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        // Custom Tailwind configuration for theme colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#e11d48', // Rose 600
+                        secondary: '#be123c', // Rose 700
+                        dark: '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for the hero background overlay */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=2069');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <i class="fa-solid fa-rings-wedding text-primary text-3xl mr-2"></i>
+                    <span class="font-bold text-2xl text-primary tracking-wide">Eternity</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-600 hover:text-primary transition font-medium">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition font-medium">Search Matches</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition font-medium">Success Stories</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition font-medium">Membership</a>
+                </div>
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex space-x-4">
+                    <button class="text-primary font-medium hover:text-secondary transition px-4 py-2">Log In</button>
+                    <button class="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-secondary transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Register Free</button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Search Form -->
+    <section class="hero-bg h-screen min-h-[600px] flex items-center justify-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+                Find Your Perfect Partner
+            </h1>
+            <p class="text-xl text-gray-200 mb-10 drop-shadow-md">Join over 1 million happy couples who found love with us.</p>
+            
+            <!-- Quick Search Widget -->
+            <div class="bg-white rounded-xl shadow-2xl p-6 md:p-8 max-w-4xl mx-auto backdrop-blur-sm bg-white/95">
+                <form class="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Looking for a</label>
+                        <select class="w-full border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary p-2.5 border">
+                            <option>Woman</option>
+                            <option>Man</option>
+                        </select>
+                    </div>
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Aged</label>
+                        <div class="flex items-center space-x-2">
+                            <select class="w-full border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary p-2.5 border">
+                                <option>20</option>
+                                <option>25</option>
+                                <option selected>28</option>
+                            </select>
+                            <span class="text-gray-500">to</span>
+                            <select class="w-full border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary p-2.5 border">
+                                <option>30</option>
+                                <option selected>35</option>
+                                <option>40</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Religion</label>
+                        <select class="w-full border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary p-2.5 border">
+                            <option>Select</option>
+                            <option>Hindu</option>
+                            <option>Muslim</option>
+                            <option>Christian</option>
+                            <option>Sikh</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="text-left">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Mother Tongue</label>
+                        <select class="w-full border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary p-2.5 border">
+                            <option>Select</option>
+                            <option>English</option>
+                            <option>Hindi</option>
+                            <option>Telugu</option>
+                            <option>Tamil</option>
+                            <option>Bengali</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="button" class="w-full bg-primary text-white px-4 py-3 rounded-md font-bold hover:bg-secondary transition shadow-md">
+                            Let's Begin
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Profiles Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Premium Members Match</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded"></div>
+            </div>
+
+            <!-- Profiles Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Profile Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <img class="h-64 w-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=300" alt="Profile">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Priya Sharma</h3>
+                        <p class="text-sm text-gray-500 mb-4">26 Yrs, 5'5", Hindu</p>
+                        <div class="flex items-center text-sm text-gray-600 mb-2">
+                            <i class="fa-solid fa-briefcase w-5 text-primary"></i> Software Engineer
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600 mb-6">
+                            <i class="fa-solid fa-location-dot w-5 text-primary"></i> Mumbai, India
+                        </div>
+                        <button class="w-full border-2 border-primary text-primary font-medium py-2 rounded-full hover:bg-primary hover:text-white transition">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <img class="h-64 w-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300" alt="Profile">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Rahul Verma</h3>
+                        <p class="text-sm text-gray-500 mb-4">29 Yrs, 5'11", Hindu</p>
+                        <div class="flex items-center text-sm text-gray-600 mb-2">
+                            <i class="fa-solid fa-briefcase w-5 text-primary"></i> Marketing Director
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600 mb-6">
+                            <i class="fa-solid fa-location-dot w-5 text-primary"></i> Delhi, India
+                        </div>
+                        <button class="w-full border-2 border-primary text-primary font-medium py-2 rounded-full hover:bg-primary hover:text-white transition">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <img class="h-64 w-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300" alt="Profile">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Aisha Khan</h3>
+                        <p class="text-sm text-gray-500 mb-4">27 Yrs, 5'4", Muslim</p>
+                        <div class="flex items-center text-sm text-gray-600 mb-2">
+                            <i class="fa-solid fa-briefcase w-5 text-primary"></i> Doctor
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600 mb-6">
+                            <i class="fa-solid fa-location-dot w-5 text-primary"></i> Hyderabad, India
+                        </div>
+                        <button class="w-full border-2 border-primary text-primary font-medium py-2 rounded-full hover:bg-primary hover:text-white transition">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Card 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <img class="h-64 w-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=300" alt="Profile">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">David Thomas</h3>
+                        <p class="text-sm text-gray-500 mb-4">31 Yrs, 6'0", Christian</p>
+                        <div class="flex items-center text-sm text-gray-600 mb-2">
+                            <i class="fa-solid fa-briefcase w-5 text-primary"></i> Architect
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600 mb-6">
+                            <i class="fa-solid fa-location-dot w-5 text-primary"></i> Bangalore, India
+                        </div>
+                        <button class="w-full border-2 border-primary text-primary font-medium py-2 rounded-full hover:bg-primary hover:text-white transition">
+                            View Profile
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div>
+                    <div class="bg-rose-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-user-plus text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">1. Create a Profile</h3>
+                    <p class="text-gray-600">Register for free and set up your detailed profile to help us find the best matches for you.</p>
+                </div>
+                <div>
+                    <div class="bg-rose-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-magnifying-glass text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">2. Search & Connect</h3>
+                    <p class="text-gray-600">Use our advanced search filters to find profiles that meet your criteria and send connection requests.</p>
+                </div>
+                <div>
+                    <div class="bg-rose-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-comments text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">3. Start Communicating</h3>
+                    <p class="text-gray-600">Once connected, start chatting, get to know each other, and take the next step towards marriage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-rings-wedding text-primary text-2xl mr-2"></i>
+                        <span class="font-bold text-xl tracking-wide">Eternity</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Dedicated to helping people find their life partners and build happy, enduring marriages.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Contact Support</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Success Stories</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Membership Plans</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Fraud Alert</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2026 Eternity Matrimony. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
